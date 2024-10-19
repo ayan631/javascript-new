@@ -6,7 +6,7 @@ console.log(3*4)    //12
 let uname="Ayan"            //type=>String
 let age = 26                //type=>number
 let avg = 79.78             //type=>number
-let temperature = null      //type=>object
+let temperature = null      //type=>object it is a standalone value
 let isLoggedin = false      //type=>boolean
 let state                   //undefined
 
