@@ -36,3 +36,12 @@ const myFunction = function (name) {
 
 myFunction(user.uname)
 console.log(typeof(myFunction)) //function
+
+
+//================================ Memory =======================================//
+// All primitive types take stack memory (e.g.: Number, Boolean, String etc)
+const name1 = "user@gmail.com"
+const name2 = name1
+name2.replace("user", "ayan");
+console.log(name2)
+ 
