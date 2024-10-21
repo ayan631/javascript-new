@@ -40,8 +40,29 @@ console.log(typeof(myFunction)) //function
 
 //================================ Memory =======================================//
 // All primitive types take stack memory (e.g.: Number, Boolean, String etc)
-const name1 = "user@gmail.com"
-const name2 = name1
-name2.replace("user", "ayan");
-console.log(name2)
- 
+let name1 = "user@gmail.com"
+let name2 = name1 // assiginig a copy
+name2 = name2.replace("user", "ayan60") // changes ar e made in the copy version
+console.log(name1)  // unchanged
+console.log(name2)  //changed
+
+
+
+// All object types take Heap memory (e.g.: Objects, Arrays, Functions)
+
+let student1 = {
+    name: "Sandy",
+    age: 21,
+    marks: 75.25
+}
+
+let student2 = student1    //now student2 refers to the same data.
+/*
+    In case of reference types, if we make any changes through them, the actual data will be changed. 
+*/ 
+student2.name = "Dipayan"  // this will change the actual data.
+student2.marks = 76.58
+
+console.log(student1)   //{ name: 'Dipayan', age: 21, marks: 76.58 }
+console.log(student2)   //{ name: 'Dipayan', age: 21, marks: 76.58 }
+
