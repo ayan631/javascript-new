@@ -3,6 +3,13 @@
 //Array Declarations:
 const nums = [1,2,3,4,5]
 const names = new Array("Bittu", "Tushar", "Bablu", "Shyam")
+
+const anothernums = nums    // it creates a shallow copy
+anothernums.push(8) //changes will occure in actual object reference.
+console.log(anothernums)
+console.log(nums)
+
+
 // console.log(nums)
 // console.log(names.sort())  //default: Ascendind order sort
 
