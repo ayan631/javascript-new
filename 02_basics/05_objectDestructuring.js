@@ -22,7 +22,9 @@ console.log(`a = ${a} ; b = ${b}`)
 
 /*-------------------------------------------------------------------------------*/
 
-//APIs: Some APIs usually return us data in JSON format.
+/*  APIs: Objects are usually sent or fetched through different API calls in
+    JSON format. */
+
 // {
 //     "id": 10012,
 //     "userName": "ayanbhattacherjee",
