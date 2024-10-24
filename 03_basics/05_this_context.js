@@ -18,8 +18,8 @@ anotherShow()
 const userDetails = {
     name: "username",
     isLoggedIn: false,
-    show: function(){
-        //this holds current context
+    show: function() {
+        // this holds current context
         console.log(`Name = ${this.name}, IsLoggedIn = ${this.isLoggedIn}`)
     }
 }
