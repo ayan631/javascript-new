@@ -1,29 +1,39 @@
-function user(){
-    let name="ayan"
-    function task() {
-        let subject = "javascript"
-        console.log(name, subject)
+function addOne(){
+    const num = 5
+    console.log(num+1)
+    function addTwo() {
+        const anothernum = 10
+        console.log(num+anothernum)
     }
-    // console.log(subject) // undefined
-    task()
+    // console.log(anothernum) // undefined
+    addTwo()
+}
+addOne()
+
+
+
+/*  A normal js function can be invoked before and after its declaration    */
+
+fun1("invoking fun1 before its declaration.")
+
+function fun1(message){
+    console.log(message);
 }
 
-user()
-
-fun1()
-function fun1(){
-    console.log("inside fun1");
-}
+fun1("invoking fun1 after its declaration.")
 
 
-// fun2()  // undefined 
-const fun2 = function(){
-    console.log("inside fun2");
+
+/*  If a js function is declated as function expression,
+    then it can not be invoked before its declaration */
+
+// fun2("invoking before declaration.")
+
+const fun2 = function(message){
+    console.log(message);
     
 }
-fun2()  //it will work
 
-/* 
-    Normal function can be invoked before declaration(e.g.: fun1).
-    but if a function is defined and it is stored in a variable, then we can not use that variable before the declaration(e.g.: fun2).
-*/
+fun2("invoking fun2 after its declaration.")  //it will work
+
+
