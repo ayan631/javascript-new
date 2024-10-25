@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScrpt Tutorials | DOM</title>
+</head>
+<body style="background-color: hsl(0, 0%, 13%); color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    //make a function to add new list items:-
+    function addLang(lang){
+        // 1. create a list element
+        const li = document.createElement("li");
+        
+        // 2. set a value for the element
+        li.innerHTML = `${lang}`;
+
+        // 3. Select the element where to be attached
+        const place = document.querySelector(".language"); 
+        
+        //4. append the element 
+        place.appendChild(li);
+    }
+    addLang("Python");
+    addLang("Ruby");
+
+
+    // add a new list item in oprimized way: 
+    function addLangOptimized(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.language').appendChild(li);
+    }
+    addLangOptimized('CPP');
+
+
+    // Edit 2nd list item:
+    const secondLang = document.querySelectorAll("li")[1];
+    // secondLang.innerHTML = 'Java';
+    const newli1=document.createElement('li');
+    newli1.textContent = "Java";
+    secondLang.replaceWith(newli1);
+
+
+    // edit 1st list item:
+    const firstLang = document.querySelectorAll("li")[0];
+    const newli2 = document.createElement('li');
+    newli2.appendChild(document.createTextNode("TypeScript"));
+    firstLang.replaceWith(newli2);
+    
+
+    // remove last list item:
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+</html>
