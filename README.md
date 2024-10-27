@@ -15,3 +15,10 @@ Blocking code actually blocks the normal flow of the program until the current o
 
 Non-Blocking code doesn't hampour the normal flow of the program.
 E.g.: Read a file asynchronously. Here the program will be executed with its normal flow and read operation will also be performed asynchronously.
+
+# Node env. vs Browser env:
+If you are using a web environment to execute your javascript program, you'll get DOM API. But, if you are using Node environment, you will not get DOM API there.
+
+# Task Queue and Promise Queue:
+JavaScript uses a task queue, which makes it very fast.
+Promises in JavaScript use a different high-priority queue, also known as Promise Queue.
