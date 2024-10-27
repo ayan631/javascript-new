@@ -2,7 +2,7 @@
 A new code repo for learning js from scratches
 
 # Default Nature of JavaScript:
-1. JavaScript is a single-threaded snchronous lamguage. Being single-threaded, it is comparatively slow in performance and execusion speed than other languages. But important fact is it doesn't feel so.  
+1. JavaScript is a single-threaded asnchronous language but its default behaviour is synchronous. Being single-threaded, it is comparatively slow in performance and execusion speed than other languages. But important fact is it doesn't feel so.  
 
 2. JavaScript executes a single line of code at a time.
     Each operation waits for the last one to complete before executing.   
