@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | JS</title>
+</head>
+<body>
+    <img id="kali" src="Maa_Kali_02.jpg" width="600" height="500">
+</body>
+
+<script>
+    const maKali = document.getElementById('kali')
+    console.log(maKali);
+    
+    maKali.addEventListener('click', function (e){
+        console.log("event added!");
+        maKali.setAttribute('src', 'Maa_Durga_03.jpg');
+        maKali.setAttribute('height', '600');
+        maKali.setAttribute('width', '400');
+    }, false)
+</script>
+</html>

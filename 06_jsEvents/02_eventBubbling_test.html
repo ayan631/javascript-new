@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubbling | JS</title>
+    <style>
+        p{
+            font-size: 20px;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1. Event Bubbling:</h1>
+        <p>Event Bubbling works from bottom to top elements. If the 3rd parameter of 'addEventListener()' function is set to 'false' for both child and its parent nodes, then events will work as Bubbling, which means the child event will be executed first and then the parent event will be executed.</p>
+        <br>
+        <h1>2. Event Capturing:</h1>
+        <p>Event Capturing works from top to bottom elements. If the 3rd parameter of 'addEventListener()' function is set to 'true' for both child and its parent nodes, then events will work as Capturing, which means parent event will be executed first, then the child event will be executed.</p>
+        <br>
+        <ul id="images">
+            <li id="enfield"><img src="https://images.pexels.com/photos/17944591/pexels-photo-17944591/free-photo-of-close-up-of-black-motorcycle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250"></li>
+            <li id="thar"><img src="https://images.pexels.com/photos/9611952/pexels-photo-9611952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250"></li>
+            <li id="kedarnath"><img src="https://images.pexels.com/photos/16152405/pexels-photo-16152405/free-photo-of-crowds-of-people-by-a-mountain-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250"></li>
+            <li id="banaras"><img src="https://images.pexels.com/photos/27670662/pexels-photo-27670662/free-photo-of-worship-worth-attention.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250"></li>
+            <li id="kolkata"><img src="https://images.pexels.com/photos/13170432/pexels-photo-13170432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250"></li>
+        </ul>
+    </div>
+
+    <script>
+        const images = document.querySelector('#images');
+        console.log(images);
+
+
+        // add a click event on ul:
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log('ul clicked !!')
+        }, false);
+        
+        
+        // add a click event on thar:
+        document.getElementById('thar').addEventListener('click',function(e){
+            console.log("thar clicked!");
+        }, false)
+    </script>
+</body>
+</html>
