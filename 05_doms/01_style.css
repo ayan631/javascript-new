@@ -1,0 +1,17 @@
+body{
+    background-color: #212121;
+    color: #dcd9d9;
+    font-family: cursive;
+}
+button{
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-left: 40px;
+    background-color: #bf3df29f;
+    color: #dcd9d9;
+    border: 2px solid black;
+    border-radius: 10px;
+}

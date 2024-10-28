@@ -19,6 +19,18 @@ E.g.: Read a file asynchronously. Here the program will be executed with its nor
 # Node env. vs Browser env:
 If you are using a web environment to execute your javascript program, you'll get DOM API. But, if you are using Node environment, you will not get DOM API there.
 
+# DOM:-
+Window object: It is a global object with lots of properties and functions.
+Whenever we open a new tab in a browser, it is the browser who creates the window object and not the javascript.
+Document Object Model is a Tree like structure that represents the entire html document. Each and every html tag is treated as a node in DOM.
+
+We can access our html file with the help of javascript's "window.document" object and its thousands of properties and functions.
+
+
+
+
+
+
 # Task Queue and Promise Queue:
 JavaScript uses a task queue, which makes it very fast.
 Promises in JavaScript use a different high-priority queue, also known as Promise Queue.
