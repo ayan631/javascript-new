@@ -2,7 +2,7 @@ console.log("Documen is Loaded!");
 
 // getElementById:-
 document.getElementById('heading1').innerHTML='DOM Manipulation'
-document.getElementById('heading2').innerHTML='By JavaScript'
+document.getElementById('heading2').innerText += ' From a beginner student'
 document.getElementById('heading2').style='margin-left: 180px'
 
 
@@ -28,3 +28,11 @@ document.querySelector('button').addEventListener('click', function(e){
     document.querySelector('body').style.backgroundColor = '#fff'; 
 }, false)
 
+
+// accessing the divs with class='box':
+const boxes = document.querySelectorAll('.box');
+let i=1;
+boxes.forEach((box) => {
+    box.innerText=`Box: ${i}`
+    i++;
+})
