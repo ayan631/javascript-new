@@ -24,6 +24,9 @@ Window object: It is a global object with lots of properties and functions.
 Whenever we open a new tab in a browser, it is the browser who creates the window object and not the javascript.
 Document Object Model is a Tree like structure that represents the entire html document. Each and every html tag is treated as a node in DOM.
 
+# Event:
+The changes in the state of an object is known as an Event. E.g.: Mouse events, Keyboard events, Form events etc.
+
 We can access our html file with the help of javascript's "window.document" object and its thousands of properties and functions.
 
 
