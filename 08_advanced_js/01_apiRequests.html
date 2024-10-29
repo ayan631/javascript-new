@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Requests | JS</title>
+</head>
+<body style="background-color: #87546b; color: #bfc0bd;">
+    <div>
+        <h2><a href="https://api.github.com/users/ayan631" target="_blank" style="text-decoration: none;">My Github Account's APIs</a></h2>
+    </div>
+    <p>0 => UNSENT:	Client has been created. open() not called yet.</p>
+    <p>1 => OPENED:	open() has been called.</p>
+    <p>2 => HEADERS_RECEIVED: send() has been called, and headers and status are available.</p>
+    <p>3 => LOADING: Downloading; responseText holds partial data.</p>
+    <p>4 => DONE: The operation is complete.</p>
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/ayan631'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURL);
+    xhr.onreadystatechange = function(){
+        switch (xhr.readyState) {
+            case 2:
+                console.log("2 => HEADERS_RECEIVED:	send() has been called, and headers and status are available.");
+                break;
+            case 3:
+                console.log("3 => LOADING:	Downloading, responseText holds partial data.");
+                break;
+            case 4:
+                console.log("4 => DONE:	The operation is complete.");
+                break;
+            default:
+                console.log("End of task !!");
+                break;
+        }
+        if(xhr.readyState == 4)
+        {
+            const respData = JSON.parse(this.responseText); // to make the String as Object.
+            console.log(typeof(respData));
+            console.log(`Number of Followers: ${respData.followers}`);
+            console.log(`Login Name: ${respData.login}`);
+            
+        }
+    }
+    xhr.send();
+
+</script>
+</html>
