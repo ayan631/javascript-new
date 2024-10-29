@@ -16,9 +16,22 @@ let patterns = [
     [6,7,8],
 ];
 
+function resetGame() {
+    let turnO=true;
+    for (const box of boxes) {
+        box.disabled = false;
+        box.innerText="";
+    }
+    document.getElementById('msg').style.display = 'none';
+}
+
+resetBtn.addEventListener('click', (e)=>{
+    resetGame();
+}, false)
+
+
 boxes.forEach((box) => {
     box.addEventListener('click', function(){
-        console.log("Box is clicked");
         if (turnO) {
             // turn of O
             box.innerText = "O";
@@ -32,7 +45,6 @@ boxes.forEach((box) => {
 
         // once a box is filled, it should be disabled.
         box.disabled = true;
-
         checkWinner();
     }, false)
 });
@@ -44,12 +56,19 @@ const checkWinner = () => {
         let pos3Value = boxes[p[2]].innerText;
         if(pos1Value != '' && pos2Value != '' && pos3Value != ''){
             if(pos1Value === pos2Value && pos2Value === pos3Value){
-                console.log(`Winner ${pos1Value}!`);
-                let message = document.createElement('p');
-                message.setAttribute('id', 'msg');
-                message.innerText = `Winner ${pos1Value}!`;
-                document.querySelector('.container').append(message);
+                showWinner(pos1Value);
             }
         }
     }
+}
+
+
+const showWinner = (winner)=>{
+    for (let box of boxes) {
+        box.disabled = true;
+    }
+    let message = document.createElement('p');
+    message.setAttribute('id', 'msg');
+    message.innerText = `Winner is ${winner}!`;
+    document.querySelector('.container').after(message);
 }

@@ -49,8 +49,10 @@ h1{
     color:aliceblue;
     font-size: 3rem;
     font-family: cursive;
-    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     flex-wrap: wrap;
 }
