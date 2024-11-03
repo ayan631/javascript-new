@@ -29,11 +29,12 @@ The changes in the state of an object is known as an Event. E.g.: Mouse events, 
 
 We can access our html file with the help of javascript's "window.document" object and its thousands of properties and functions.
 
-
-
-
-
-
 # Task Queue and Promise Queue:
 JavaScript uses a task queue, which makes it very fast.
 Promises in JavaScript use a different high-priority queue, also known as Promise Queue.
+
+# Promises:
+A promise is an object that represents the eventual completion or failure of an aynchronous operation and its resulting value. Apromise has 3 methods to handle its 3 states:
+i. then() -> executes when promise is resolved.
+ii. catch() -> executes when promise is rejected.
+iii. finally() -> executes when the promise is settled regardless of the outcomes. 
